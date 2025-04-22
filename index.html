@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JB YANZ STORE 1</title>
+  <style>
+    body {
+      background-color: #0f0f1a;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #00f0ff;
+    }
+    form {
+      background-color: #1c1c2e;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 15px #00f0ff;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background-color: #00f0ff;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .note {
+      font-size: 14px;
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <h1>JB YANZ STORE 1</h1>
+
+  <h2>Form Order Akun</h2>
+  <form action="https://formsubmit.co/dudequerta07@gmail.com" method="POST" enctype="multipart/form-data">
+    <input type="text" name="nama" placeholder="Nama" required />
+    <input type="text" name="jenis_akun" placeholder="Jenis Akun yang Dibeli" required />
+    <input type="text" name="akun" placeholder="Akun" required />
+    <input type="text" name="harga" placeholder="Harga" required />
+    <select name="metode_pembayaran" required onchange="handlePembayaran(this.value)">
+      <option value="">Pilih Metode Pembayaran</option>
+      <option>DANA</option>
+      <option>OVO</option>
+      <option>GOPAY</option>
+      <option>SHOPEE PAY</option>
+      <option value="QRIS">QRIS</option>
+      <option>BRI</option>
+      <option>BCA</option>
+      <option>BNI</option>
+      <option>SEABANK</option>
+    </select>
+    <input type="file" name="foto" accept="image/*"/>
+    <button type="submit">Kirim Order</button>
+  </form>
+
+  <h2>Form Jual Akun</h2>
+  <form action="https://formsubmit.co/dudequerta07@gmail.com" method="POST" enctype="multipart/form-data">
+    <input type="text" name="nama" placeholder="Nama" required />
+    <input type="text" name="akun_yang_dijual" placeholder="Akun yang Dijual" required />
+    <input type="text" name="harga_jual" placeholder="Harga Jual" required />
+    <select name="transfer_ke" required onchange="handleTransfer(this.value)">
+      <option value="">Transfer Ke</option>
+      <option value="DANA">DANA</option>
+      <option value="OVO">OVO</option>
+      <option value="GOPAY">GOPAY</option>
+      <option value="SHOPEE PAY">SHOPEE PAY</option>
+      <option value="QRIS">QRIS</option>
+      <option value="BRI">BRI</option>
+      <option value="BCA">BCA</option>
+      <option value="BNI">BNI</option>
+      <option value="SEABANK">SEABANK</option>
+    </select>
+    <input type="text" name="nomor_tujuan" placeholder="Nomor Dana/OVO/Rek Bank atau upload QRIS"/>
+    <input type="file" name="foto_akun" accept="image/*" required/>
+    <button type="submit">Kirim Jual Akun</button>
+  </form>
+
+  <p class="note">NB: Pentingg!! Bagi yang jual akun harap pilih metode transfer dengan benar karena di situ lah admin akan men-transfer uang jika akun telah terjual</p>
+
+  <script>
+    function handlePembayaran(value) {
+      if (value === "QRIS") {
+        window.location.href = "qris.html";
+      }
+    }
+    function handleTransfer(value) {
+      // Show extra fields if needed
+    }
+  </script>
+</body>
+</html>

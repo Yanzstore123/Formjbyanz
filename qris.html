@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QRIS Pembayaran</title>
+  <style>
+    body {
+      background-color: #0f0f1a;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    img {
+      width: 300px;
+      max-width: 90%;
+      margin-top: 20px;
+      border: 2px solid #00f0ff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00f0ff;
+    }
+    h1 {
+      color: #00f0ff;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #00f0ff;
+      border: none;
+      border-radius: 8px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Scan QRIS untuk Pembayaran</h1>
+  <img src="qris.jpg" alt="QRIS Payment">
+  <br>
+  <button onclick="redirectWa()">Saya Sudah Bayar</button>
+
+  <script>
+    function redirectWa() {
+      const pesan = "Halo Admin, saya sudah melakukan pembayaran via QRIS.";
+      window.open(`https://wa.me/6283861073603?text=${encodeURIComponent(pesan)}`, "_blank");
+    }
+  </script>
+</body>
+</html>
